@@ -1,3 +1,9 @@
+main section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center; }
+
 header {
   display: flex;
   flex-direction: column;
@@ -35,6 +41,17 @@ main {
   justify-content: center;
   justify-items: center;
   align-items: center; }
+  main .boton-standard {
+    background-color: grey;
+    color: brown; }
+  main div {
+    width: 400px;
+    height: 300px; }
+  main section {
+    margin: 3rem;
+    padding: 2rem;
+    border: 2px solid black;
+    line-height: 1rem; }
   main img {
     display: flow-root;
     justify-content: center;
@@ -42,6 +59,7 @@ main {
     margin: 25px;
     padding: 10 px; }
     main img h2 {
+      color: nth red, yellow, black, green, 3;
       grid-area: titulo-p;
       text-align: center;
       font-size: 28px;
@@ -61,3 +79,32 @@ footer {
   background-image: linear-gradient(to top, brown, #f17575);
   height: 80px;
   padding-top: 50px; }
+
+contacto {
+  font-size: 28px;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center; }
+
+estiloimg {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 300px 300px;
+  gap: 8px;
+  justify-items: center;
+  align-items: center; }
+
+estiloalq {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 300px 300px;
+  gap: 8px;
+  justify-items: center;
+  align-items: center; }
+
+t1 {
+  width: 100%;
+  font-size: 28px;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center; }

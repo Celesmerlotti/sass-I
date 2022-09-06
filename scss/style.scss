@@ -1,10 +1,15 @@
 // Nesting
+@import "base/variables";
+@import "base/mapas";
+@import "base/listas";
+@import "base/mixin";
+@import "base/extend";
 
 header{
     display: flex;
     flex-direction: column;
     align-items: center; 
-
+    
     img{
     height: 80px;
     padding: 10px;
@@ -33,9 +38,21 @@ header{
         }
         }
     }
-      }
+      
+}
     
 main{
+    .boton-standard {
+        background-color: map-get($map: $standard, $key: bg-standard );
+        color: map-get($map: $standard, $key: color-standard );
+    }
+    div{
+        @include medidas (400px, 300px);
+    }
+    section {
+        @include box-model;
+        @extend %flex;
+    }
     height: 100vh;
     font-family: 'Roboto Condensed', sans-serif;
     display: grid;
@@ -55,6 +72,7 @@ main{
     margin: 25px;
     padding: 10 px;
     h2{
+    color: nth ($colores,3);    
     grid-area: titulo-p;
     text-align: center;
     font-size: 28px;
@@ -80,4 +98,37 @@ footer{
     height: 80px;
     padding-top: 50px;    
 
+}
+
+contacto{
+    font-size: 28px;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+}
+
+estiloimg{
+   display: grid;
+   height: 100vh;
+   grid-template-columns: 33% 33% 33%;
+   grid-template-rows: 300px 300px ;
+   gap: 8px;
+   justify-items: center;
+   align-items: center;
+}
+
+estiloalq{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 300px 300px ;
+    gap: 8px;
+    justify-items: center;
+    align-items: center;
+}
+
+t1{
+    width: 100%;
+    font-size: 28px;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center; 
 }
